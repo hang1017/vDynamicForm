@@ -7,7 +7,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: '123123',
+  title: 'vDynamicForm',
   lastUpdated: true,
   base: process.env.NODE_ENV === 'production' ? '/@alitajs/vdform' : '/',
   locales: {

@@ -1,7 +1,9 @@
 import DefaultTheme from 'vitepress/theme';
+import 'ant-design-vue/dist/antd.css';
 import DemoBlock from '@ruabick/vitepress-demo-block';
 import '@ruabick/vitepress-demo-block/dist/style.css';
 import './var.css';
+
 
 export default {
   ...DefaultTheme,

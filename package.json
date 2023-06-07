@@ -44,6 +44,7 @@
     "vite-plugin-dts": "^1.4.0",
     "vitepress": "latest",
     "vue": "latest",
+    "less": "^4.1.2",
     "@typescript-eslint/eslint-plugin": "^5.33.1",
     "@typescript-eslint/parser": "^5.33.1",
     "eslint-define-config": "^1.6.0",

@@ -4,13 +4,13 @@ map:
 realPath: src/__docs__/index.md
 ---
 
-## 按钮
+## DformInput
 
 渲染效果如下
 
-<demo src="../demo/button.vue"
-  title="Demo 演示"
+<demo src="../demo/dformInput.vue"
+  title="DformInput"
   desc="这是一个 Demo 渲染示例">
 </demo>
 
-<API src="../components/Button/index.vue" lang="zh"></API>
+<!-- <API src="../components/Button/index.vue" lang="zh"></API> -->
