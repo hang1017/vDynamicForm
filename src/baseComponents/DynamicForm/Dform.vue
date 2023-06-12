@@ -14,8 +14,6 @@ const props = withDefaults(
 );
 
 const attrs = useAttrs();
-
-console.log(attrs);
 </script>
 
 <template>

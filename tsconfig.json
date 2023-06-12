@@ -3,8 +3,8 @@
         "baseUrl": "./",
         "outDir": "dist",
         "sourceMap": false,
-        "target": "ES2022",
-        "module": "ES2022",
+        "target": "ESNext",
+        "module": "ESNext",
         "moduleResolution": "node",
         "allowJs": false,
         "noUnusedLocals": true,
@@ -17,6 +17,7 @@
         "removeComments": false,
         "declaration": true,
         "isolatedModules": true,
+        "allowSyntheticDefaultImports": true,
         "jsx": "preserve",
         "lib": [
             "esnext",
@@ -39,7 +40,7 @@
     },
     "include": [
         "src/*"
-    ],
+, "env.d.ts"    ],
     "exclude": [
         "node_modules",
         "dist",
