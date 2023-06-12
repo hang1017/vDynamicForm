@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { ref, reactive } from "vue";
-import { Button, Tag } from "ant-design-vue";
+import { Button, Tag, Space, Form } from "ant-design-vue";
 import type { FormInstance } from "ant-design-vue";
-import DynamicForm, { DformInput } from "@alitajs/vdform";
-const formValues = reactive<Record<string, any>>({});
+import { DformInput } from "@alitajs/vdform";
+const formValues = reactive<Record<string, any>>({
+  name: "小明",
+});
 
 const formRef = ref<FormInstance>();
 
@@ -15,7 +17,7 @@ const onFinishFailed = (errorInfo: any) => {
   console.log("Failed:", errorInfo);
 };
 
-let validatePass = async (_rule: any, value: string) => {
+const validatePass = async (_rule: any, value: string) => {
   if (value === "") {
     return Promise.reject("密码为必填项");
   } else if (value !== formValues.pwd) {
@@ -24,10 +26,15 @@ let validatePass = async (_rule: any, value: string) => {
     return Promise.resolve();
   }
 };
+
+const resetForm = () => {
+  if (formRef.value) formRef.value.resetFields();
+};
 </script>
 
 <template>
-  <DynamicForm
+  <Form
+    ref="formRef"
     :model="formValues"
     @finish="onFinish"
     @finishFailed="onFinishFailed"
@@ -89,6 +96,9 @@ let validatePass = async (_rule: any, value: string) => {
       style="width: 100%"
       :autosize="{ minRows: 3, maxRows: 5 }"
     />
-    <Button type="primary" html-type="submit">提交</Button>
-  </DynamicForm>
+    <Space>
+      <Button type="primary" html-type="submit">提交</Button>
+      <Button type="primary" @click="resetForm">重置</Button>
+    </Space>
+  </Form>
 </template>

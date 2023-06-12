@@ -9,9 +9,10 @@ export const sidebar = {
   ],
   '/': [
     {
-      text: '介绍',
+      text: '组件',
       items: [
-        { text: '按钮', link: '/' },
+        { text: 'Input', link: '/' },
+        { text: 'Picker', link: '/picker/picker' },
       ],
     },
   ],
